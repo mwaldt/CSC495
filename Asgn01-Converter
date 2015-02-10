@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Converter
+{
+    class Program
+    {
+        private static double outputNumber;
+        static void Main(string[] args)
+        {
+            KilometerToMiles(50);
+            KilometerToMiles(10);
+            KilometerToMiles(300);
+            milesToKilometers(240);
+            milesToKilometers(80);
+            milesToKilometers(300);
+            kilogramsToPounds(10);
+            kilogramsToPounds(30);
+            kilogramsToPounds(50);
+            poundsToKilograms(100);
+            poundsToKilograms(300);
+            poundsToKilograms(120);
+            Console.ReadLine();
+
+        }
+
+        public static void KilometerToMiles(double input)
+        {
+            outputNumber = input / 1.6;
+            Console.Out.WriteLine(input + " Kilometers = " + outputNumber + " Miles");
+        }
+
+        public static void milesToKilometers(double input)
+        {
+            outputNumber = input * 1.6;
+            Console.Out.WriteLine(input + " Miles = " + outputNumber + " Kilometers");
+        }
+
+        public static void poundsToKilograms(double input)
+        {
+            outputNumber = input / 2.2;
+            Console.Out.WriteLine(input + " Pounds = " + outputNumber + " Kilograms");
+        }
+
+        public static void kilogramsToPounds(double input)
+        {
+            outputNumber = input * 2.2;
+            Console.Out.WriteLine(input + " Kilograms = " + outputNumber + " Pounds");
+        }
+    }
+}
